@@ -58,9 +58,10 @@ if __name__ == "__main__":
     log.info(f"Starting webhook on port {PORT}")
     log.info(f"Webhook URL: {full_webhook_url}")
 
-    application.run_webhook(
-        listen="0.0.0.0",
-        port=PORT,
-        webhook_url=full_webhook_url,
-        webhook_path=WEBHOOK_PATH,
-    )
+    aapplication.run_webhook(
+    	listen="0.0.0.0",
+    	port=PORT,
+    	url_path=WEBHOOK_PATH,          # <-- правильна назва параметра
+    	webhook_url=full_webhook_url,   # куди Telegram буде слати апдейти
+)
+
