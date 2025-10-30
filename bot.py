@@ -58,7 +58,7 @@ if __name__ == "__main__":
     log.info(f"Starting webhook on port {PORT}")
     log.info(f"Webhook URL: {full_webhook_url}")
 
-    aapplication.run_webhook(
+    application.run_webhook(
     	listen="0.0.0.0",
     	port=PORT,
     	url_path=WEBHOOK_PATH,          # <-- правильна назва параметра
